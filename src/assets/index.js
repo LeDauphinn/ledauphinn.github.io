@@ -25,6 +25,9 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import sunex from "./company/sunex.png";
+import simsoft from "./company/simsoft.png";
+
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -56,6 +59,8 @@ export {
   shopify,
   starbucks,
   tesla,
+  sunex,
+  simsoft,
   carrent,
   jobit,
   tripguide,
