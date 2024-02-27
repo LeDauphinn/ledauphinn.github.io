@@ -21,6 +21,14 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import android from "./tech/android.png";
+import bootstrap from "./tech/bootstrap.png";
+import clang from "./tech/c.png";
+import csharp from "./tech/cs.png";
+import cpp from "./tech/cpp.png";
+import java from "./tech/java.png";
+import sass from "./tech/sass.png";
+
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -32,6 +40,11 @@ import simsoft from "./company/simsoft.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import bookmark from "./bookmark-app.png";
+import chicken from "./cb.png";
+import union from "./union.png";
+import securent from "./securent.png";
+
 
 export {
   logo,
@@ -64,4 +77,15 @@ export {
   carrent,
   jobit,
   tripguide,
+  android,
+  bootstrap,
+  clang,
+  csharp,
+  cpp,
+  java,
+  sass,
+  bookmark,
+  chicken,
+  union,
+  securent
 };

@@ -51,7 +51,8 @@ const About = () => {
         JavaScript, and expertise in React Framework.
         I'm a quick learner and can collaborate closely with my team members to
         create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Currently, I'm looking for a job position as a frontend developer.
+        real-world problems. Currently, I'm a Frontend Developer Trainee at OnlyJS Academy and
+        I'm looking for a job position as a frontend developer.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

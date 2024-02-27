@@ -24,6 +24,17 @@ import {
   jobit,
   tripguide,
   threejs,
+  android,
+  bootstrap,
+  clang,
+  csharp,
+  cpp,
+  java,
+  sass,
+  bookmark,
+  chicken,
+  union,
+  securent,
 } from "../assets";
 
 export const navLinks = [
@@ -70,6 +81,10 @@ const technologies = [
     icon: css,
   },
   {
+    name: "SASS",
+    icon: sass,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -82,36 +97,32 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Java",
+    icon: java,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "C",
+    icon: clang,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "C++",
+    icon: cpp,
   },
   {
-    name: "git",
-    icon: git,
+    name: "C#",
+    icon: csharp,
+  },
+  {
+    name: "Android Studio",
+    icon: android,
   },
   {
     name: "figma",
     icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
@@ -172,68 +183,137 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Senior Design Project · SecuRent",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "SecuRent is a web application which enhances the house rental process as well as addressing the issues that are related with the house rental process. SecuRent application emerges as a pioneering solution designed to transform the dynamics between tenants and landlords.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "axios",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "springboot",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "postgreSQL",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: securent,
+    source_code_link: "https://github.com/ArdaYildiz1/SecuRent",
   },
   {
-    name: "Job IT",
+    name: "Bookmark App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The bookmarking application provides its users to add their favorite websites to their bookmarks list, and they can also share their bookmarks as JSON format to other users so that they can append other users' bookmarks list to their own list.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "axios",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "docker",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: bookmark,
+    source_code_link: "https://github.com/LeDauphinn/bookmark-app",
   },
   {
-    name: "Trip Guide",
+    name: "unI0n",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "unI0n is a mobile application for university students to interact with each other over their common questions and interests. They can arrange meetings and social events.",
     tags: [
       {
-        name: "nextjs",
+        name: "androidstudio",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "xml",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "java",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: union,
+    source_code_link: "https://github.com/trelans/UnionApp",
+  },
+];
+const projects2 = [
+  {
+    name: "Web Design · Sass & Figma",
+    description:
+      "This is a copy website designed via html, bootstrap and sass. I have implemented a figma design sheet, which can be found in the README of the repository.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "sass",
+        color: "green-text-gradient",
+      },
+      {
+        name: "figma",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/LeDauphinn/ojs-sass-figma",
+  },
+  {
+    name: "Web Design · Bootstrap, Positioning, Forms & Pseudo Elements",
+    description:
+      "This project is a copy website designed via html, css and bootstrap. I have re-implemented a template website, which can be found in the README of the repository.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bookmark,
+    source_code_link: "https://github.com/LeDauphinn/ojs-bs-pos-form-pseudo",
+  },
+  {
+    name: "Web Design · Positioning & User Interface",
+    description:
+      "This is a copy website designed via html, css and bootstrap. I have copied a template bootstrap website, which can be found in the README of the repository.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bookmark,
+    source_code_link: "https://github.com/LeDauphinn/ojs-pos-ui",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, projects2 };

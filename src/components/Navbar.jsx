@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import ppicture from "../assets/me.jpg";
+import github_logo from "../assets/github.png";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -44,6 +45,7 @@ const Navbar = () => {
           }}
         >
           <img src={ppicture} alt='logo' className='w-9 h-9 object-contain rounded-full' />
+          <img src={github_logo} onClick={() => window.open("https://github.com/LeDauphinn", "_blank")} alt='logo' className='w-9 h-9 object-contain rounded-full' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             LeDauphinn &nbsp;
             <span className='sm:block hidden'> | Yunus Eren Türkeri</span>
