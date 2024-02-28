@@ -17,10 +17,11 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <div className="mt-10">
       <Tilt
+      // max: 45,
         options={{
-          max: 45,
+          max: 0,
           scale: 1,
           speed: 450,
         }}
@@ -63,20 +64,20 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
-      </motion.div>
+      </div>
 
       <div className='w-full flex'>
-        <motion.p
+        <p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
@@ -86,15 +87,15 @@ const Works = () => {
           Each project is briefly described with links to code repositories.
           They reflect my ability to design and implement user interfaces, 
           work with different technologies, and work in team projects effectively.
-        </motion.p>
+        </p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-10 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-10 flex flex-wrap gap-7'>
         {projects2.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
