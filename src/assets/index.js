@@ -44,6 +44,9 @@ import bookmark from "./bookmark-app.png";
 import chicken from "./cb.png";
 import union from "./union.png";
 import securent from "./securent.png";
+import bsposform from "./bsposform.png";
+import posui from "./posui.png";
+import sassfigma from "./sassfigma.png";
 
 
 export {
@@ -87,5 +90,8 @@ export {
   bookmark,
   chicken,
   union,
-  securent
+  securent,
+  bsposform,
+  posui,
+  sassfigma
 };

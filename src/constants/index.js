@@ -35,6 +35,9 @@ import {
   chicken,
   union,
   securent,
+  bsposform,
+  posui,
+  sassfigma,
 } from "../assets";
 
 export const navLinks = [
@@ -269,7 +272,7 @@ const projects2 = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: sassfigma,
     source_code_link: "https://github.com/LeDauphinn/ojs-sass-figma",
   },
   {
@@ -290,7 +293,7 @@ const projects2 = [
         color: "pink-text-gradient",
       },
     ],
-    image: bookmark,
+    image: bsposform,
     source_code_link: "https://github.com/LeDauphinn/ojs-bs-pos-form-pseudo",
   },
   {
@@ -311,7 +314,7 @@ const projects2 = [
         color: "pink-text-gradient",
       },
     ],
-    image: bookmark,
+    image: posui,
     source_code_link: "https://github.com/LeDauphinn/ojs-pos-ui",
   },
 ];
