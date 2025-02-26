@@ -50,9 +50,10 @@ const About = () => {
         I'm a skilled frontend developer with experience in TypeScript and
         JavaScript, and expertise in React Framework.
         I'm a quick learner and can collaborate closely with my team members to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Currently, I'm a Frontend Developer Trainee at OnlyJS Academy and
-        I'm looking for a job position as a frontend developer.
+        create efficient, scalable, and user-friendly solutions for
+        real-world problems. I have graduated from the "Frontend Developer
+        Trainee Program" at OnlyJS Academy and further improved my implementation
+        skills. I'm looking for a job position as a front-end developer.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
