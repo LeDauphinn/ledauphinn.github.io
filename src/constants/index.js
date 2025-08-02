@@ -42,6 +42,12 @@ import {
 
 export const navLinks = [
   {
+    id: "cv",
+    title: "CV",
+    external: true,
+    href: "/resume.pdf" // <-- updated to point to the PDF
+  },
+  {
     id: "about",
     title: "About",
   },
