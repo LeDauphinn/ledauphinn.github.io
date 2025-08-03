@@ -48,12 +48,13 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a skilled frontend developer with experience in TypeScript and
-        JavaScript, and expertise in React Framework.
+        JavaScript, and expertise in ReactJS.
         I'm a quick learner and can collaborate closely with my team members to
         create efficient, scalable, and user-friendly solutions for
-        real-world problems. I have graduated from the "Frontend Developer
-        Trainee Program" at OnlyJS Academy and further improved my implementation
-        skills. I'm looking for a job position as a front-end developer.
+        real-world problems. Currently, I'm working as a Frontend Developer at
+        Elekon Smart Building Technologies, where I develop user interfaces for
+        long-range IoT communication and a customized file management system,
+        using NextJS via TypeScript.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

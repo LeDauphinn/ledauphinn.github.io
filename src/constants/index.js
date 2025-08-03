@@ -14,6 +14,8 @@ import {
   mongodb,
   git,
   figma,
+  rma,
+  elekon,
   docker,
   meta,
   tesla,
@@ -63,15 +65,15 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
     title: "Frontend Developer",
     icon: mobile,
   },
   {
-    title: "React Developer",
+    title: "NextJS Developer",
+    icon: web,
+  },
+  {
+    title: "ReactJS Developer",
     icon: backend,
   },
   {
@@ -136,6 +138,27 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Frontend Developer",
+    company_name: "Elekon Smart Building Technologies · Full time",
+    icon: elekon,
+    iconBg: "#E6DEDD",
+    date: "May 2025 - Present",
+    points: [
+      "Development of user-interfaces for long-range IoT communication and a customized file management system, using NextJS via TypeScript. For the development process, the protocols of MQTT and LoRaWAN were used.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "RMA Yapı · Freelance",
+    icon: rma,
+    iconBg: "#E6DEDD",
+    date: "Nov 2024 - Apr 2025",
+    points: [
+      "Implementation of a Custom CRM (Customer Relationship Management) System for RMA Yapı Team",
+      "The Five Bays Resort Hotel in Mersin, Silifke, needed a customizable and functional CRM system. Responsibility was to develop the CRM modules on the frontend using ReactJS via TypeScript and contribute to the unit tests and functionality tests of the modules.",
+    ],
+  },
   {
     title: "Testing and Development (Frontend)",
     company_name: "SunExpress · Internship",

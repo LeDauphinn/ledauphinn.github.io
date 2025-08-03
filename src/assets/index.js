@@ -35,7 +35,8 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import sunex from "./company/sunex.png";
 import simsoft from "./company/simsoft.png";
-
+import rma from "./company/rma.png"; // New company icon
+import elekon from "./company/elekon.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -77,6 +78,8 @@ export {
   tesla,
   sunex,
   simsoft,
+  rma,
+  elekon,
   carrent,
   jobit,
   tripguide,
