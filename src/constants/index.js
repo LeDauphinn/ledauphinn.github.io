@@ -16,6 +16,8 @@ import {
   figma,
   rma,
   elekon,
+  besler,
+  bisoft,
   docker,
   meta,
   tesla,
@@ -139,11 +141,35 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Fullstack Web Developer",
+    company_name: "B.E.S.L.E.R. Steuerberatungs GmbH · Contract",
+    icon: besler,
+    iconBg: "#E6DEDD",
+    date: "May 2026 - Present",
+    points: [
+      "Development of a multilingual website on a custom content management system, built from scratch as a PHP 8 MVC application with no framework dependency.",
+      "The system provides a block-based page builder with reusable UI components, a media library and an admin panel for pages, blog posts and site settings.",
+      "The front-end is written in vanilla JavaScript and CSS with a mobile-first, responsive approach, and the site is served in three languages via a translation API.",
+      "Form submissions pass spam and validation checks before being posted to the client's CRM over its REST API. Apache/Plesk hosting, SMTP, cron jobs and SEO configuration were also part of the responsibility.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "BiSoft Information Technologies · Full time",
+    icon: bisoft,
+    iconBg: "#E6DEDD",
+    date: "Oct 2025 - Feb 2026",
+    points: [
+      "Frontend contributions to the product Vispeahen, a large-scale ReactJS project mostly built with class-based components.",
+      "Vispeahen helps customers manage their big data through user-friendly dashboards — charts and graph plugins — via custom filtering and sorting of database tables.",
+    ],
+  },
+  {
     title: "Frontend Developer",
     company_name: "Elekon Smart Building Technologies · Full time",
     icon: elekon,
     iconBg: "#E6DEDD",
-    date: "May 2025 - Present",
+    date: "May 2025 - Sep 2025",
     points: [
       "Development of user-interfaces for long-range IoT communication and a customized file management system, using NextJS via TypeScript. For the development process, the protocols of MQTT and LoRaWAN were used.",
     ],

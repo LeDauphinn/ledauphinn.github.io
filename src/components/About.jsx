@@ -47,14 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled frontend developer with experience in TypeScript and
-        JavaScript, and expertise in ReactJS.
-        I'm a quick learner and can collaborate closely with my team members to
-        create efficient, scalable, and user-friendly solutions for
-        real-world problems. Currently, I'm working as a Frontend Developer at
-        Elekon Smart Building Technologies, where I develop user interfaces for
-        long-range IoT communication and a customized file management system,
-        using NextJS via TypeScript.
+        Frontend developer with around two years of experience building user
+        interfaces for data-heavy dashboards, IoT systems and CRM platforms
+        using React, Next.js and TypeScript. Recently extended this into
+        full-stack work, developing and operating a complete multilingual
+        website and its custom content management system in PHP, including its
+        hosting and deployment. Motivated to keep specialising in modern
+        frontend development while working confidently across the full stack.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
