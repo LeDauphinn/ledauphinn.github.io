@@ -58,8 +58,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.5 : 0.75}
+        position={isMobile ? [0, -2.6, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -104,49 +104,55 @@ const ComputersCanvas = () => {
   if (!render3D) return null;
 
   return (
-    <CanvasErrorBoundary>
-      <Canvas
-        frameloop='demand'
-        // Shadows are expensive on mobile GPUs; skip them there.
-        shadows={!isMobile}
-        // Cap the pixel ratio at 1 on mobile. High-DPI phones would otherwise
-        // render a 2x (4x the pixels) framebuffer and run out of GPU memory,
-        // crashing the WebGL context (the white screen).
-        dpr={isMobile ? 1 : [1, 2]}
-        camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{
-          // `preserveDrawingBuffer` roughly doubles framebuffer memory and is
-          // not needed here, so leave it off to keep mobile memory low.
-          powerPreference: "high-performance",
-          antialias: !isMobile,
-          alpha: true,
-        }}
-        onCreated={({ gl }) => {
-          // If the GPU drops the context (usually out-of-memory on mobile),
-          // unmount the canvas gracefully instead of leaving a white block.
-          gl.domElement.addEventListener(
-            "webglcontextlost",
-            (event) => {
-              event.preventDefault();
-              console.warn("WebGL context lost — hiding 3D model.");
-              setRender3D(false);
-            },
-            false
-          );
-        }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-          />
-          <Computers isMobile={isMobile} />
-        </Suspense>
+    // On mobile the canvas is capped below full height, leaving a touch-free
+    // strip at the bottom of the hero to scroll from. (The canvas captures
+    // touch gestures for the rotate control, so a full-height canvas makes the
+    // page hard to scroll.)
+    <div className='w-full' style={{ height: isMobile ? "78vh" : "100%" }}>
+      <CanvasErrorBoundary>
+        <Canvas
+          frameloop='demand'
+          // Shadows are expensive on mobile GPUs; skip them there.
+          shadows={!isMobile}
+          // Cap the pixel ratio at 1 on mobile. High-DPI phones would otherwise
+          // render a 2x (4x the pixels) framebuffer and run out of GPU memory,
+          // crashing the WebGL context (the white screen).
+          dpr={isMobile ? 1 : [1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{
+            // `preserveDrawingBuffer` roughly doubles framebuffer memory and is
+            // not needed here, so leave it off to keep mobile memory low.
+            powerPreference: "high-performance",
+            antialias: !isMobile,
+            alpha: true,
+          }}
+          onCreated={({ gl }) => {
+            // If the GPU drops the context (usually out-of-memory on mobile),
+            // unmount the canvas gracefully instead of leaving a white block.
+            gl.domElement.addEventListener(
+              "webglcontextlost",
+              (event) => {
+                event.preventDefault();
+                console.warn("WebGL context lost — hiding 3D model.");
+                setRender3D(false);
+              },
+              false
+            );
+          }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+          </Suspense>
 
-        <Preload all />
-      </Canvas>
-    </CanvasErrorBoundary>
+          <Preload all />
+        </Canvas>
+      </CanvasErrorBoundary>
+    </div>
   );
 };
 
