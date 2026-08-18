@@ -125,7 +125,55 @@
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
+/* Animated rainbow gradient nav button */
+.rainbow-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffd000,
+    #00c853,
+    #00b0ff,
+    #2962ff,
+    #7c4dff,
+    #ff00aa,
+    #ff0000
+  );
+  background-size: 300% 100%;
+  animation: rainbow-flow 6s linear infinite;
+  transition: transform 0.2s ease;
+}
 
+.rainbow-btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes rainbow-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Respect users who prefer less motion — keep the gradient, drop the animation */
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-btn {
+    animation: none;
+  }
+}
 @keyframes mulShdSpin {
   0%,
   100% {

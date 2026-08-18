@@ -52,16 +52,29 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              className={
+                nav.rainbow
+                  ? "cursor-pointer"
+                  : `${
+                      active === nav.title ? "text-white" : "text-secondary"
+                    } hover:text-white text-[18px] font-medium cursor-pointer`
+              }
               onClick={() => setActive(nav.title)}
             >
-              {nav.external ? (
+              {nav.rainbow ? (
+                <a
+                  href={nav.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rainbow-btn text-[14px]"
+                >
+                  {nav.title}
+                </a>
+              ) : nav.external ? (
                 <a href={nav.href} target="_blank_new" rel="noopener noreferrer">{nav.title}</a>
               ) : (
                 <a href={`#${nav.id}`}>{nav.title}</a>
@@ -87,15 +100,28 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  className={
+                    nav.rainbow
+                      ? "cursor-pointer"
+                      : `font-poppins font-medium cursor-pointer text-[16px] ${
+                          active === nav.title ? "text-white" : "text-secondary"
+                        }`
+                  }
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  {nav.external ? (
+                  {nav.rainbow ? (
+                    <a
+                      href={nav.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rainbow-btn text-[13px]"
+                    >
+                      {nav.title}
+                    </a>
+                  ) : nav.external ? (
                     <a href={nav.href} target="_blank" rel="noopener noreferrer">{nav.title}</a>
                   ) : (
                     <a href={`#${nav.id}`}>{nav.title}</a>
