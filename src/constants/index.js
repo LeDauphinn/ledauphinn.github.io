@@ -149,7 +149,7 @@ const technologies = [
 const experiences = [
   {
     title: "Fullstack Web Developer",
-    company_name: "B.E.S.L.E.R. Steuerberatungs GmbH · Contract",
+    company_name: "DuTACS GmbH · Full time (on-site)",
     icon: dutacs,
     iconBg: "#E6DEDD",
     date: "May 2026 - Present",
