@@ -37,7 +37,7 @@ import sunex from "./company/sunex.png";
 import simsoft from "./company/simsoft.png";
 import rma from "./company/rma.png"; // New company icon
 import elekon from "./company/elekon.png";
-import besler from "./company/besler.png";
+import dutacs from "./company/dutacs.png";
 import bisoft from "./company/bisoft.png";
 
 import carrent from "./carrent.png";
@@ -82,7 +82,7 @@ export {
   simsoft,
   rma,
   elekon,
-  besler,
+  dutacs,
   bisoft,
   carrent,
   jobit,

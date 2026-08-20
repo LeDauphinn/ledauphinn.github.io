@@ -16,7 +16,7 @@ import {
   figma,
   rma,
   elekon,
-  besler,
+  dutacs,
   bisoft,
   docker,
   meta,
@@ -150,14 +150,14 @@ const experiences = [
   {
     title: "Fullstack Web Developer",
     company_name: "B.E.S.L.E.R. Steuerberatungs GmbH · Contract",
-    icon: besler,
+    icon: dutacs,
     iconBg: "#E6DEDD",
     date: "May 2026 - Present",
     points: [
-      "Development of a multilingual website on a custom content management system, built from scratch as a PHP 8 MVC application with no framework dependency.",
-      "The system provides a block-based page builder with reusable UI components, a media library and an admin panel for pages, blog posts and site settings.",
+      "Development of a multilingual website for Five Bays Resort (fivebaysresort.com), a luxury resort on Turkey's Mediterranean coast, on a custom content management system built from scratch as a PHP 8 MVC application with no framework dependency.",
+      "The system provides a block-based page builder with reusable UI components, a media library and an admin panel for pages, villas, blog posts and site settings.",
       "The front-end is written in vanilla JavaScript and CSS with a mobile-first, responsive approach, and the site is served in three languages via a translation API.",
-      "Form submissions pass spam and validation checks before being posted to the client's CRM over its REST API. Apache/Plesk hosting, SMTP, cron jobs and SEO configuration were also part of the responsibility.",
+      "Form submissions pass spam and validation checks before being posted to the resort's CRM over its REST API. Apache/Plesk hosting, SMTP, cron jobs, and SEO configuration were also part of the responsibility.",
     ],
   },
   {
