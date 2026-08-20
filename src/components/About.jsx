@@ -47,13 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Frontend developer with around two years of experience building user
-        interfaces for data-heavy dashboards, IoT systems and CRM platforms
-        using React, Next.js and TypeScript. Recently extended this into
-        full-stack work, developing and operating a complete multilingual
-        website and its custom content management system in PHP, including its
-        hosting and deployment. Motivated to keep specialising in modern
-        frontend development while working confidently across the full stack.
+        Software developer with a year and a half of professional experience 
+        building user interfaces for data-heavy dashboards, IoT systems, and 
+        CRM platforms using React, Next.js and TypeScript. Recently extended 
+        this into fullstack work, developing and operating a complete multilingual
+        website and its custom content management system in PHP 8, including its
+        hosting and deployment. Motivated to keep specialising in modern frontend
+        development while working confidently across the full stack. 
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
