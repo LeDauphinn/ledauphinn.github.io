@@ -167,8 +167,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Oct 2025 - Feb 2026",
     points: [
-      "Frontend contributions to the product Vispeahen, a large-scale ReactJS project mostly built with class-based components.",
-      "Vispeahen helps customers manage their big data through user-friendly dashboards — charts and graph plugins — via custom filtering and sorting of database tables.",
+      "Frontend contributions to the product Vispeahen, a large-scale project built with ReactJS via TypeScript on the frontend and Spring Boot on the backend, mostly including class-based components.",
+      "Vispeahen helps customers manage their big data (SQL/xlsx/csv) through user-friendly dashboards — charts and graph plugins — via custom filtering and sorting of database tables.",
     ],
   },
   {
