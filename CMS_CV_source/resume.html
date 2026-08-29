@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yunus Eren Türkeri — Curriculum Vitae</title>
+<meta name="author" content="Yunus Eren Türkeri">
+<meta name="description" content="Curriculum Vitae — Frontend, Full-stack &amp; CMS Developer">
+<meta name="keywords" content="Frontend Developer, Full-stack, CMS, React, Next.js, TypeScript, PHP 8, Wiesbaden, Frankfurt">
+<link rel="stylesheet" href="base.css">
+<style>
+@page {
+  size: A4;
+  margin: 13mm 14mm 14mm 14mm;
+  @bottom-left {
+    content: 'Yunus Eren Türkeri  ·  Curriculum Vitae';
+    font-family: 'GMono', monospace; font-size: 6.2pt;
+    letter-spacing: 0.09em; color: #a3adb6; vertical-align: top; padding-top: 5pt;
+  }
+  @bottom-right {
+    content: counter(page) ' / ' counter(pages);
+    font-family: 'GMono', monospace; font-size: 6.2pt;
+    letter-spacing: 0.09em; color: #a3adb6; vertical-align: top; padding-top: 5pt;
+  }
+}
+
+.name { font-size: 30pt; }
+
+/* ---- profile blurb sits inside a tinted slab ---- */
+.profile {
+  margin-top: 16pt;
+  padding: 11pt 13pt 11pt 13pt;
+  background: var(--tint);
+  border-left: 2pt solid var(--accent-2);
+  font-size: 9pt;
+  line-height: 1.6;
+  color: var(--body);
+}
+
+/* ---- the date-rail grid ---- */
+.entry {
+  display: flex;
+  gap: 12pt;
+  margin-bottom: 13pt;
+  page-break-inside: avoid;
+}
+.entry:last-child { margin-bottom: 0; }
+
+.rail {
+  flex: 0 0 68pt;
+  font-family: 'GMono', monospace;
+  font-size: 6.9pt;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  padding-top: 1.6pt;
+  text-align: right;
+  border-right: 0.6pt solid var(--rule);
+  padding-right: 10pt;
+}
+.rail .now { color: var(--accent-2); }
+
+.body-col { flex: 1 1 auto; min-width: 0; }
+
+.org {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.002em;
+  margin: 0;
+}
+.org .place {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 8.7pt;
+  letter-spacing: 0;
+}
+.tag {
+  font-family: 'GMono', monospace;
+  font-size: 6.3pt;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 0.5pt solid var(--rule);
+  border-radius: 2pt;
+  padding: 1pt 3.5pt 0.6pt 3.5pt;
+  margin-left: 4pt;
+  white-space: nowrap;
+}
+.role-line {
+  font-size: 8.9pt;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 2.5pt 0 3pt 0;
+  letter-spacing: 0.005em;
+}
+.desc {
+  font-size: 8.75pt;
+  line-height: 1.58;
+  margin: 0;
+  color: var(--body);
+  text-align: left;
+}
+.desc + .desc { margin-top: 3pt; }
+
+ul.projects {
+  margin: 4pt 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 8.75pt;
+  line-height: 1.58;
+}
+ul.projects > li { padding-left: 10pt; position: relative; margin-bottom: 2.5pt; }
+ul.projects > li::before {
+  content: '';
+  position: absolute; left: 0; top: 4.6pt;
+  width: 3.2pt; height: 3.2pt;
+  background: var(--accent-2);
+  border-radius: 50%;
+}
+.projects-label {
+  font-family: 'GMono', monospace;
+  font-size: 6.3pt; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--muted); margin: 6pt 0 0 0;
+}
+
+/* ---- skills / language / interests block ---- */
+.kv { display: flex; gap: 12pt; margin-bottom: 9pt; page-break-inside: avoid; }
+.kv:last-child { margin-bottom: 0; }
+.kv .k {
+  flex: 0 0 68pt;
+  font-family: 'GMono', monospace;
+  font-size: 6.6pt; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); text-align: right; padding-top: 2pt;
+  border-right: 0.6pt solid var(--rule); padding-right: 10pt;
+}
+.kv .v { flex: 1 1 auto; font-size: 8.75pt; line-height: 1.58; min-width: 0; }
+
+.chips { margin: 0; padding: 0; }
+.chip {
+  display: inline-block;
+  font-family: 'GMono', monospace;
+  font-size: 6.8pt;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  background: var(--tint);
+  border: 0.5pt solid #e6e2d9;
+  border-radius: 2.5pt;
+  padding: 2pt 4.5pt 1.4pt 4.5pt;
+  margin: 0 3pt 3.5pt 0;
+}
+
+.langs { display: flex; gap: 16pt; }
+.langs .lang { font-size: 8.75pt; min-width: 74pt; }
+.langs .lang b { color: var(--ink); }
+.langs .lang span {
+  display: block;
+  font-family: 'GMono', monospace;
+  font-size: 6.5pt; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-top: 1pt;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+
+<header class="masthead">
+  <div class="identity">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1 class="name">Yunus Eren Türkeri</h1>
+    <p class="role">Frontend, Full-stack &amp; CMS Developer · Wiesbaden, Germany</p>
+    <p class="contact">
+      yunustuerkeri@gmail.com<span class="sep">|</span>+49 155 10697501<br>
+      <a href="https://ledauphinn.github.io">ledauphinn.github.io</a><span class="sep">|</span><a href="https://www.linkedin.com/in/yunus-tuerkeri-38a343176/">linkedin.com/in/yunus-tuerkeri-38a343176</a>
+    </p>
+  </div>
+  <div class="portrait-frame">
+    <img class="portrait" src="assets/portrait_sq.jpg" alt="Yunus Eren Türkeri">
+  </div>
+</header>
+
+<p class="profile">
+  Software developer with a year and a half of professional experience building user interfaces for
+  data-heavy dashboards, IoT systems, and CRM platforms using <strong>React</strong>, <strong>Next.js</strong>
+  and <strong>TypeScript</strong>. Recently extended this into full-stack work, developing and operating a
+  complete multilingual website and its custom content management
+  system&nbsp;(<strong>CMS</strong>) in <strong>PHP&nbsp;8</strong>, including its hosting and deployment. Motivated to keep specialising in modern
+  frontend development while working confidently across the full stack.
+</p>
+
+<div class="section-head"><h2>Work Experience</h2><div class="line"></div></div>
+
+<div class="entry">
+  <div class="rail">05/2026<br><span class="now">Present</span></div>
+  <div class="body-col">
+    <p class="org">DuTACS GmbH <span class="place">— Wiesbaden, Germany</span><span class="tag">Full-time · on-site</span></p>
+    <p class="role-line">Full-stack Web Development</p>
+    <p class="desc">
+      Development of a multilingual website for Five Bays Resort (<a href="https://fivebaysresort.com">fivebaysresort.com</a>),
+      a luxury resort on Turkey's Mediterranean coast, on a <strong>custom content management system (CMS)</strong>
+      built from scratch as a <strong>PHP 8 MVC</strong> application with no framework dependency. The system
+      provides a <strong>block-based page builder</strong> with <strong>reusable UI components</strong>, a
+      <strong>media library</strong> and an <strong>admin panel</strong> for pages, villas, blog posts and site
+      settings. The <strong>front-end</strong> is written in <strong>vanilla JavaScript</strong> and
+      <strong>CSS</strong> with a <strong>mobile-first</strong>, responsive approach, and the site is served in
+      <strong>three languages</strong> via a <strong>translation API</strong>. Form submissions pass
+      <strong>spam and validation checks</strong> before being posted to the resort's <strong>CRM</strong> over
+      its <strong>REST API</strong>. <strong>Apache/Plesk hosting</strong>, <strong>SMTP</strong>, cron jobs and
+      <strong>SEO configuration</strong> were also part of the responsibility.
+    </p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">10/2025<br>02/2026</div>
+  <div class="body-col">
+    <p class="org">BiSoft Information Technologies <span class="place">— Ankara, Turkey</span><span class="tag">Full-time</span></p>
+    <p class="role-line">Frontend Development</p>
+    <p class="desc">
+      Contributions regarding <strong>frontend</strong> of the product <strong>Vispeahen</strong>, which is a
+      big-scale project made with <strong>ReactJS via TypeScript</strong> for the frontend and
+      <strong>Spring Boot</strong> for the <strong>backend</strong>; mostly including <strong>class-based</strong>
+      components. Vispeahen helps customers to manage their <strong>big data (SQL / xlsx / csv)</strong> over
+      <strong>user friendly</strong> dashboards — <strong>charts</strong> and <strong>graph</strong> plugins —
+      via <strong>custom filtering and sorting</strong> of database tables.
+    </p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">05/2025<br>09/2025</div>
+  <div class="body-col">
+    <p class="org">Elekon Smart Building Technologies <span class="place">— Ankara, Turkey</span><span class="tag">Full-time</span></p>
+    <p class="role-line">Frontend Development</p>
+    <p class="desc">
+      Development of user-interfaces for long-range IoT communication and a customized file management system,
+      using <strong>NextJS via TypeScript</strong>. For the development process, <strong>the protocols of
+      MQTT</strong> and <strong>LoRaWAN</strong> were used.
+    </p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">11/2024<br>04/2025</div>
+  <div class="body-col">
+    <p class="org">RMA Yapı <span class="place">— İstanbul, Turkey</span><span class="tag">Freelance</span></p>
+    <p class="role-line">Implementation of a Custom CRM (Customer Relationship Management) System for RMA Yapı Team</p>
+    <p class="desc">
+      The Five Bays Resort Hotel in Mersin, Silifke, needed a customizable and functional CRM system.
+      Responsibility was to develop the CRM modules on the frontend using <strong>ReactJS via TypeScript</strong>
+      and contribute to the <strong>unit tests</strong> and <strong>functionality tests</strong> of the modules.
+    </p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">08/2023<br>09/2023</div>
+  <div class="body-col">
+    <p class="org">SunExpress <span class="place">— Frankfurt, Germany</span><span class="tag">Internship</span></p>
+    <p class="role-line">Testing &amp; Development (Frontend) for In-Flight Retail Ecosystem</p>
+    <p class="desc">
+      Contribution to the analysis team with testing and development on the <strong>BackOffice Website</strong>
+      and <strong>EPOS Mobile Application</strong>.
+    </p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">08/2022<br>09/2022</div>
+  <div class="body-col">
+    <p class="org">Simsoft Computer Technology <span class="place">— Ankara, Turkey</span><span class="tag">Internship</span></p>
+    <p class="role-line">Game Development via Unity (C#)</p>
+    <p class="desc">
+      Development of a hyper-casual videogame including <strong>UI design</strong>, gameplay mechanics and
+      testing, and development of UI interactions of a puzzle game.
+    </p>
+  </div>
+</div>
+
+<div class="section-head"><h2>Education</h2><div class="line"></div></div>
+
+<div class="entry">
+  <div class="rail">09/2020<br>06/2024</div>
+  <div class="body-col">
+    <p class="org">Bilkent University <span class="place">— Ankara, Turkey</span></p>
+    <p class="role-line">B.Sc. Computer Science</p>
+    <p class="projects-label">Relevant Projects</p>
+    <ul class="projects">
+      <li>Developed <strong>unI0n</strong> mobile app for Android OS, in Algorithm &amp; Programming</li>
+      <li>Object Oriented Software Engineering Project: WebApp for Erasmus Application</li>
+      <li>Senior Design Project: Management system of rental houses as a service for the Government of Turkey</li>
+    </ul>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">09/2011<br>06/2020</div>
+  <div class="body-col">
+    <p class="org">TED Ankara College <span class="place">— Private Middle &amp; High School</span></p>
+    <p class="desc">
+      <strong>International Baccalaureate Degree</strong>, High Level Math &amp; Physics; GPA 86/100.
+    </p>
+  </div>
+</div>
+
+<div class="section-head"><h2>Research Experience</h2><div class="line"></div></div>
+
+<div class="entry">
+  <div class="rail">06/2019<br>08/2019</div>
+  <div class="body-col">
+    <p class="org">GEMSEC <span class="place">— University of Washington, Seattle, WA, USA</span></p>
+    <p class="role-line">Genetically Engineered Materials Science and Engineering Center</p>
+    <p class="desc">
+      <strong>Biomimetic Surface Design</strong> — Quantitative evaluation about hydrophobicity of plant leaves
+      via contact angle determination.
+    </p>
+  </div>
+</div>
+
+<div class="section-head"><h2>Certificates</h2><div class="line"></div></div>
+
+<div class="entry">
+  <div class="rail">07/2024</div>
+  <div class="body-col">
+    <p class="org">Only JavaScript</p>
+    <p class="desc">“Frontend Developer Trainee Programme”</p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">05/31/2019</div>
+  <div class="body-col">
+    <p class="org">International Youth Neuroscience Association</p>
+    <p class="desc">“Psychological &amp; Neurological Experiments Applied on Humans” (Genovese Syndrome)</p>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="rail">07/10–12<br>2019</div>
+  <div class="body-col">
+    <p class="org">Abalone Summer Science Camp for High School Students</p>
+    <p class="role-line">Univ. of Washington, Seattle, WA, USA</p>
+    <p class="desc">
+      Academic Enrichment Program on Molecular Biomimetics, Computational Modeling, and AI;
+      organized by GEMSEC / UW-USA.
+    </p>
+  </div>
+</div>
+
+<div class="section-head"><h2>Key Skills</h2><div class="line"></div></div>
+
+<div class="kv">
+  <div class="k">Software</div>
+  <div class="v chips">
+    <span class="chip">NextJS</span><span class="chip">ReactJS</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Java</span><span class="chip">PHP</span>
+  </div>
+</div>
+
+<div class="kv">
+  <div class="k">Engineering</div>
+  <div class="v chips">
+    <span class="chip">Requirements Engineering</span><span class="chip">Unified Modeling Language (UML)</span><span class="chip">Design Patterns</span>
+  </div>
+</div>
+
+<div class="kv">
+  <div class="k">Instrumental</div>
+  <div class="v">
+    CAG100 Goniometer (with FTA32 Program); SEM [JEOL, JSM-7000F] (Field Emission Scanning Electron Microscope).
+  </div>
+</div>
+
+<div class="section-head"><h2>Languages</h2><div class="line"></div></div>
+
+<div class="kv">
+  <div class="k">Spoken</div>
+  <div class="v">
+    <div class="langs">
+      <div class="lang"><b>Turkish</b><span>Native</span></div>
+      <div class="lang"><b>English</b><span>Full professional</span></div>
+      <div class="lang"><b>French</b><span>Elementary</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-head"><h2>Activities &amp; Interests</h2><div class="line"></div></div>
+
+<div class="kv">
+  <div class="k">Outside work</div>
+  <div class="v">
+    English voice-acting for an RPG video-game character (freelance); Choir (Tenor);
+    Basketball (licensed, 2013–17); Travelling.
+  </div>
+</div>
+
+</body>
+</html>

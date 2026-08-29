@@ -1,0 +1,147 @@
+/* ============================================================
+   Shared design system — Yunus Eren Türkeri
+   Display : Instrument Serif   Body : Instrument Sans   Meta : Geist Mono
+   ============================================================ */
+
+@font-face { font-family: 'ISerif'; src: url('fonts/InstrumentSerif-Regular.ttf'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'ISerif'; src: url('fonts/InstrumentSerif-Italic.ttf');  font-weight: 400; font-style: italic; }
+
+@font-face { font-family: 'ISans'; src: url('fonts/InstrumentSans-Regular.ttf');    font-weight: 400; font-style: normal; }
+@font-face { font-family: 'ISans'; src: url('fonts/InstrumentSans-Italic.ttf');     font-weight: 400; font-style: italic; }
+@font-face { font-family: 'ISans'; src: url('fonts/InstrumentSans-Bold.ttf');       font-weight: 700; font-style: normal; }
+@font-face { font-family: 'ISans'; src: url('fonts/InstrumentSans-BoldItalic.ttf'); font-weight: 700; font-style: italic; }
+
+@font-face { font-family: 'GMono'; src: url('fonts/GeistMono-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: 'GMono'; src: url('fonts/GeistMono-Bold.ttf');    font-weight: 700; }
+
+:root {
+  --ink:      #16202b;   /* headings, name                */
+  --body:     #3a4652;   /* running text                  */
+  --muted:    #78848f;   /* dates, meta, footers          */
+  --accent:   #1e5a78;   /* petrol blue — section labels  */
+  --accent-2: #a8763e;   /* warm brass — hairline accents */
+  --rule:     #d9dee3;   /* hairlines                     */
+  --paper:    #ffffff;
+  --tint:     #f6f4ef;   /* warm paper tint               */
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 10pt; }
+
+body {
+  margin: 0;
+  font-family: 'ISans', sans-serif;
+  color: var(--body);
+  background: var(--paper);
+  hyphens: none;
+}
+
+/* ---------- masthead: the element both documents share ---------- */
+
+.masthead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14pt;
+}
+
+.identity { flex: 1 1 auto; }
+
+.eyebrow {
+  font-family: 'GMono', monospace;
+  font-size: 6.6pt;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin: 0 0 5pt 0;
+}
+
+.name {
+  font-family: 'ISerif', serif;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+
+.role {
+  font-family: 'GMono', monospace;
+  font-size: 7.1pt;
+  letter-spacing: 0.155em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 7pt 0 0 0;
+}
+
+.contact {
+  font-family: 'GMono', monospace;
+  font-size: 7.1pt;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 9pt 0 0 0;
+}
+.contact a { color: var(--accent); text-decoration: none; }
+.contact .sep { color: var(--rule); padding: 0 4pt; }
+
+/* portrait */
+.portrait {
+  width: 82pt; height: 82pt;
+  border-radius: 3pt;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.portrait-frame {
+  flex: 0 0 auto;
+  padding: 3pt;
+  border: 0.6pt solid var(--rule);
+  border-radius: 5pt;
+  background: var(--paper);
+  line-height: 0;
+}
+
+/* ---------- top & bottom page furniture ---------- */
+
+.topbar {
+  height: 3pt;
+  background: var(--accent);
+  margin-bottom: 14pt;
+}
+.topbar::after {
+  content: '';
+  display: block;
+  width: 62pt; height: 3pt;
+  background: var(--accent-2);
+}
+
+/* ---------- section headings ---------- */
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 8pt;
+  margin: 19pt 0 10pt 0;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.section-head h2 {
+  font-family: 'ISans', sans-serif;
+  font-size: 7.6pt;
+  font-weight: 700;
+  letter-spacing: 0.185em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+  white-space: nowrap;
+}
+.section-head .line {
+  flex: 1 1 auto;
+  height: 0.6pt;
+  background: var(--rule);
+}
+
+/* ---------- links ---------- */
+a { color: var(--accent); text-decoration: none; }
+
+strong { color: var(--ink); font-weight: 700; }
