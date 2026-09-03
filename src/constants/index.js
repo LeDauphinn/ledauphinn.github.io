@@ -46,11 +46,18 @@ import {
 
 export const navLinks = [
   {
+    id: "portfolio",
+    title: "My Portfolio",
+    external: true,
+    href: "https://ledauphinn.github.io/portfolio",
+    isButton: true,
+  },
+  {
     id: "gifty",
-    title: "MY FAVORITE PROJECT: GIFTY",
+    title: "Hobby Project: Gifty",
     external: true,
     href: "https://ledauphinn.github.io/gifty",
-    rainbow: true, // renders as the animated rainbow button
+    isButton: true,
   },
   {
     id: "cv",
