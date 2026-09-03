@@ -29,16 +29,17 @@ const Navbar = () => {
 
   return (
     <nav
+      style={{ zIndex: 9999, transform: "translateZ(999px)", WebkitTransform: "translateZ(999px)" }}
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-[999] ${
+      } w-full flex items-center py-5 fixed top-0 z-[9999] ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2 z-[999] pointer-events-auto'
+          className='flex items-center gap-2 z-[9999] pointer-events-auto'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -52,7 +53,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-6 lg:gap-8 items-center z-[999] pointer-events-auto'>
+        <ul className='list-none hidden sm:flex flex-row gap-6 lg:gap-8 items-center z-[9999] pointer-events-auto'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -92,18 +93,19 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className='sm:hidden flex flex-1 justify-end items-center z-[999] pointer-events-auto'>
+        <div className='sm:hidden flex flex-1 justify-end items-center z-[9999] pointer-events-auto'>
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain cursor-pointer relative z-[999]'
+            className='w-[28px] h-[28px] object-contain cursor-pointer relative z-[9999]'
             onClick={() => setToggle(!toggle)}
           />
 
           <div
+            style={{ zIndex: 9999, transform: "translateZ(999px)", WebkitTransform: "translateZ(999px)" }}
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-[999] rounded-xl shadow-2xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-[9999] rounded-xl shadow-2xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
