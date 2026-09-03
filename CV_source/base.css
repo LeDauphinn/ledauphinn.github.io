@@ -1,197 +1,140 @@
 /* ============================================================
-   base.css — shared design system
-   Yunus Eren Türkeri · CV + cover letters
-   Fonts: Instrument Serif (display), Instrument Sans (body),
-          Geist Mono (metadata / labels)
+   Yunus Eren Türkeri — shared document design system
+   petrol / brass / paper, Instrument Serif + Sans + Geist Mono
    ============================================================ */
 
-@font-face {
-  font-family: "Instrument Serif";
-  src: url("fonts/InstrumentSerif-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal;
-}
-@font-face {
-  font-family: "Instrument Serif";
-  src: url("fonts/InstrumentSerif-Italic.ttf") format("truetype");
-  font-weight: 400; font-style: italic;
-}
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("fonts/InstrumentSans-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal;
-}
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("fonts/InstrumentSans-Italic.ttf") format("truetype");
-  font-weight: 400; font-style: italic;
-}
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("fonts/InstrumentSans-Bold.ttf") format("truetype");
-  font-weight: 700; font-style: normal;
-}
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("fonts/InstrumentSans-BoldItalic.ttf") format("truetype");
-  font-weight: 700; font-style: italic;
-}
-@font-face {
-  font-family: "Geist Mono";
-  src: url("fonts/GeistMono-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal;
-}
-@font-face {
-  font-family: "Geist Mono";
-  src: url("fonts/GeistMono-Bold.ttf") format("truetype");
-  font-weight: 700; font-style: normal;
-}
+@font-face { font-family: "Instrument Serif"; src: url("fonts/InstrumentSerif-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Instrument Serif"; src: url("fonts/InstrumentSerif-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Instrument Sans"; src: url("fonts/InstrumentSans-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Instrument Sans"; src: url("fonts/InstrumentSans-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Instrument Sans"; src: url("fonts/InstrumentSans-Bold.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "Instrument Sans"; src: url("fonts/InstrumentSans-BoldItalic.ttf"); font-weight: 700; font-style: italic; }
+@font-face { font-family: "Geist Mono"; src: url("fonts/GeistMono-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Geist Mono"; src: url("fonts/GeistMono-Bold.ttf"); font-weight: 700; font-style: normal; }
 
 :root {
-  --petrol:      #235878;   /* primary accent  */
-  --petrol-deep: #1a4258;
-  --brass:       #a67441;   /* secondary accent */
-  --ink:         #1c1c1c;
-  --body:        #2b2b2b;
-  --muted:       #7a7a7a;
-  --rule:        #d8d5cc;
-  --paper:       #f5f4ef;   /* off-white slab tone */
-  --chip-border: #cfcbc0;
+  --petrol: #235878;
+  --brass:  #a67441;
+  --paper:  #f5f4ef;
+  --ink:    #1c1c1c;
+  --body:   #2b2b2b;
+  --mute:   #6f7276;
+  --rule:   #d8d5cc;
 
   --serif: "Instrument Serif", Georgia, serif;
   --sans:  "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
-  --mono:  "Geist Mono", "SFMono-Regular", Consolas, monospace;
+  --mono:  "Geist Mono", "SFMono-Regular", monospace;
 }
 
 * { box-sizing: border-box; }
 
-html, body {
+body {
   margin: 0;
-  padding: 0;
   font-family: var(--sans);
+  font-size: 8.05pt;
+  line-height: 1.34;
   color: var(--body);
-  font-size: 9pt;
-  line-height: 1.45;
   hyphens: none;
 }
 
 a { color: var(--petrol); text-decoration: none; }
 
-/* ---------- two-tone topbar ---------- */
+/* ---------- top bar ---------- */
 .topbar {
   display: flex;
   height: 3pt;
-  margin-bottom: 14pt;
+  margin-bottom: 11pt;
 }
-.topbar .brass  { width: 78pt; background: var(--brass); }
-.topbar .petrol { flex: 1;     background: var(--petrol); }
+.topbar .brass  { flex: 0 0 78pt; background: var(--brass); }
+.topbar .petrol { flex: 1 1 auto;  background: var(--petrol); }
 
 /* ---------- masthead ---------- */
 .masthead {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 14pt;
+  justify-content: space-between;
+  gap: 16pt;
 }
-.masthead .doc-label {
+.doclabel {
   font-family: var(--mono);
   font-size: 6.6pt;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--brass);
   margin-bottom: 1pt;
 }
-.masthead h1 {
+.name {
   font-family: var(--serif);
+  font-size: 31pt;
+  line-height: 1.06;
   font-weight: 400;
-  font-size: 29pt;
-  line-height: 1.04;
-  letter-spacing: 0.005em;
   color: var(--ink);
-  margin: 0 0 3pt 0;
+  margin: 0 0 2.5pt 0;
+  letter-spacing: 0.004em;
 }
-.masthead .role {
+.role {
   font-family: var(--mono);
   font-size: 7.2pt;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--petrol);
-  margin-bottom: 7pt;
+  margin-bottom: 5.5pt;
 }
-.masthead .contact {
+.contact {
   font-family: var(--mono);
-  font-size: 7.4pt;
+  font-size: 7.1pt;
   line-height: 1.62;
+  color: var(--mute);
+}
+.contact .sep { color: var(--rule); padding: 0 2pt; }
+.contact a { color: var(--petrol); }
+
+.portrait {
+  flex: 0 0 auto;
+  border: 0.6pt solid var(--rule);
+  padding: 2pt;
+  background: #fff;
+}
+.portrait img { display: block; width: 66pt; height: 66pt; object-fit: cover; }
+
+/* ---------- profile slab ---------- */
+.slab {
+  background: var(--paper);
+  border-left: 2.6pt solid var(--brass);
+  padding: 6.5pt 10pt 6.5pt 9pt;
+  margin: 8pt 0 0 0;
+  font-size: 8.15pt;
+  line-height: 1.42;
   color: var(--body);
 }
-.masthead .contact .sep { color: var(--rule); padding: 0 2pt; }
+.slab b { color: var(--ink); }
 
-/* ---------- portrait ---------- */
-.portrait {
-  width: 88pt;
-  padding: 2.5pt;
-  border: 0.6pt solid var(--rule);
-  flex: none;
-}
-.portrait img { width: 100%; display: block; }
-
-/* ---------- section heading ---------- */
-.section-head {
+/* ---------- section heads ---------- */
+.sechead {
   display: flex;
   align-items: center;
-  gap: 7pt;
-  margin: 5pt 0 4pt 0;
+  gap: 8pt;
+  margin: 6.5pt 0 3.5pt 0;
 }
-.section-head .label {
+.sechead .lbl {
   font-family: var(--mono);
   font-size: 6.8pt;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--petrol);
   white-space: nowrap;
 }
-.section-head::after {
-  content: "";
-  flex: 1;
-  height: 0.6pt;
-  background: var(--rule);
-}
-
-/* ---------- tinted slab (profile / subject) ---------- */
-.slab {
-  background: var(--paper);
-  border-left: 2.2pt solid var(--brass);
-  padding: 8pt 11pt;
-}
+.sechead .line { flex: 1 1 auto; height: 0.5pt; background: var(--rule); }
 
 /* ---------- chips ---------- */
 .chip {
   display: inline-block;
   font-family: var(--mono);
   font-size: 6.4pt;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  border: 0.6pt solid var(--chip-border);
-  border-radius: 1.5pt;
-  padding: 1.4pt 4pt;
-  margin: 0 3pt 3pt 0;
-}
-.tag {
-  font-family: var(--mono);
-  font-size: 6pt;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border: 0.5pt solid var(--chip-border);
-  border-radius: 1.5pt;
-  padding: 0.8pt 3pt;
+  letter-spacing: 0.04em;
+  color: var(--mute);
+  border: 0.5pt solid var(--rule);
+  border-radius: 2pt;
+  padding: 1.2pt 3.4pt;
   white-space: nowrap;
-}
-
-/* ---------- footer ---------- */
-.footer-line {
-  font-family: var(--mono);
-  font-size: 6.4pt;
-  letter-spacing: 0.12em;
-  color: #b3b0a8;
-  text-transform: uppercase;
 }
